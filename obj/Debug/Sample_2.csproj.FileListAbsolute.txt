@@ -1,0 +1,16 @@
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Sample_2.exe.config
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Sample_2.exe
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Sample_2.pdb
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.AssemblyReference.cache
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Properties.Resources.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.GenerateResource.cache
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.CoreCompileInputs.cache
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.exe
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.pdb
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Bunifu.Licensing.dll
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.CopyComplete
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Main.resources
