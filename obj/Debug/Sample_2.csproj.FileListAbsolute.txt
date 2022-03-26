@@ -14,3 +14,6 @@ C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\Bunifu.UI.WinForms.BunifuP
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.CopyComplete
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Main.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.Home.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.Setup.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.Settings.resources

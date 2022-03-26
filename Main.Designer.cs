@@ -40,9 +40,14 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.btnTitle = new FontAwesome.Sharp.IconButton();
+            this.panelMainPage = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -69,9 +74,9 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSettings.IconChar = FontAwesome.Sharp.IconChar.Cogs;
-            this.btnSettings.IconColor = System.Drawing.Color.Black;
+            this.btnSettings.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSettings.IconSize = 40;
+            this.btnSettings.IconSize = 38;
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.Location = new System.Drawing.Point(0, 400);
             this.btnSettings.Name = "btnSettings";
@@ -90,9 +95,9 @@
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn5.IconChar = FontAwesome.Sharp.IconChar.Box;
-            this.btn5.IconColor = System.Drawing.Color.Black;
+            this.btn5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn5.IconSize = 40;
+            this.btn5.IconSize = 38;
             this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn5.Location = new System.Drawing.Point(0, 340);
             this.btn5.Name = "btn5";
@@ -111,9 +116,9 @@
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn4.IconChar = FontAwesome.Sharp.IconChar.Box;
-            this.btn4.IconColor = System.Drawing.Color.Black;
+            this.btn4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btn4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn4.IconSize = 40;
+            this.btn4.IconSize = 38;
             this.btn4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn4.Location = new System.Drawing.Point(0, 280);
             this.btn4.Name = "btn4";
@@ -132,8 +137,9 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.TachometerAlt;
-            this.btnDashboard.IconColor = System.Drawing.Color.Black;
+            this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.IconSize = 38;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(0, 220);
             this.btnDashboard.Name = "btnDashboard";
@@ -152,9 +158,9 @@
             this.btnSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSetup.IconChar = FontAwesome.Sharp.IconChar.SlidersH;
-            this.btnSetup.IconColor = System.Drawing.Color.Black;
+            this.btnSetup.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnSetup.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSetup.IconSize = 40;
+            this.btnSetup.IconSize = 38;
             this.btnSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSetup.Location = new System.Drawing.Point(0, 160);
             this.btnSetup.Name = "btnSetup";
@@ -173,9 +179,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome.IconColor = System.Drawing.Color.Black;
+            this.btnHome.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.IconSize = 40;
+            this.btnHome.IconSize = 38;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.Location = new System.Drawing.Point(0, 100);
             this.btnHome.Name = "btnHome";
@@ -232,20 +238,72 @@
             this.pboxLogo.TabIndex = 0;
             this.pboxLogo.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelTitle);
+            this.panel1.Controls.Add(this.btnTitle);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(230, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(554, 80);
+            this.panel1.TabIndex = 1;
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTitle.Location = new System.Drawing.Point(235, 24);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 26);
+            this.labelTitle.TabIndex = 2;
+            // 
+            // btnTitle
+            // 
+            this.btnTitle.BackColor = System.Drawing.Color.Transparent;
+            this.btnTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnTitle.FlatAppearance.BorderSize = 0;
+            this.btnTitle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnTitle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTitle.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnTitle.IconColor = System.Drawing.Color.Black;
+            this.btnTitle.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTitle.IconSize = 32;
+            this.btnTitle.Location = new System.Drawing.Point(0, 0);
+            this.btnTitle.Name = "btnTitle";
+            this.btnTitle.Size = new System.Drawing.Size(81, 80);
+            this.btnTitle.TabIndex = 0;
+            this.btnTitle.UseVisualStyleBackColor = false;
+            // 
+            // panelMainPage
+            // 
+            this.panelMainPage.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelMainPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainPage.Location = new System.Drawing.Point(230, 80);
+            this.panelMainPage.Name = "panelMainPage";
+            this.panelMainPage.Size = new System.Drawing.Size(554, 481);
+            this.panelMainPage.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.panelMainPage);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OBD Program | HEMA Industy Inc.";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -263,6 +321,10 @@
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.Panel panelSpace;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelTitle;
+        private FontAwesome.Sharp.IconButton btnTitle;
+        private System.Windows.Forms.Panel panelMainPage;
     }
 }
 
