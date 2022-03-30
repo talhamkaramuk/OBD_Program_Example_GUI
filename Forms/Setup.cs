@@ -19,14 +19,7 @@ namespace Sample_2.Forms
             {
                 cboxCOMPorts.Items.Add(port);
             }
-        }
-
-        private void tboxBaudRate_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            tboxBaudRate.Enabled = false;
         }
 
         // Connect & Disconnect
@@ -38,10 +31,16 @@ namespace Sample_2.Forms
                 try
                 {
                     serialPort1.PortName = cboxCOMPorts.Text;
-                    serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
+                    if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
+                    {
+                        serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
+                    }
+                    else if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
+                    {
+                        serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
+                    }
                     serialPort1.Open();
                     btnConnect.Enabled = false;
-
                 }
                 catch (Exception ex)
                 {
@@ -69,9 +68,54 @@ namespace Sample_2.Forms
         }
         #endregion
 
+        // Handle Baud Rate
+        #region
+        private void tboxBaudRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void checkboxBaudRate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkboxBaudRate.Checked)
+            {
+                tboxBaudRate.Enabled = false;
+                cboxBaudRate.Enabled = true;
+            }
+            else if (checkboxBaudRate.Checked)
+            {
+                tboxBaudRate.Enabled = true;
+                cboxBaudRate.Enabled = false;
+            }
+        }
+        #endregion
+
         private void Setup_FormClosed(object sender, FormClosedEventArgs e)
         {
             serialPort1.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
+                {
+                    serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
+                }
+                else if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
+                {
+                    serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
+                }
+                Console.WriteLine($"Port Name: {serialPort1.PortName}, Baud Rate: {serialPort1.BaudRate}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

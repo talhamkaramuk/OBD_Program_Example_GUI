@@ -36,28 +36,32 @@
             this.cboxCOMPorts = new System.Windows.Forms.ComboBox();
             this.gboxOBDProtocol = new System.Windows.Forms.GroupBox();
             this.cboxOBDProtocol = new System.Windows.Forms.ComboBox();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.gboxBaudRate = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkboxBaudRate = new System.Windows.Forms.CheckBox();
             this.labelBaudRate = new System.Windows.Forms.Label();
             this.tboxBaudRate = new System.Windows.Forms.TextBox();
             this.cboxBaudRate = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gboxCOMPorts.SuspendLayout();
             this.gboxOBDProtocol.SuspendLayout();
             this.gboxBaudRate.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConnect
             // 
             this.btnConnect.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnConnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(255)))), ((int)(((byte)(25)))));
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.Image = global::Sample_2.Properties.Resources.icons8_connected_32;
             this.btnConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConnect.Location = new System.Drawing.Point(12, 360);
+            this.btnConnect.Location = new System.Drawing.Point(0, 0);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnConnect.Size = new System.Drawing.Size(262, 70);
+            this.btnConnect.Size = new System.Drawing.Size(262, 80);
             this.btnConnect.TabIndex = 4;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = false;
@@ -65,14 +69,16 @@
             // 
             // btnDisconnect
             // 
+            this.btnDisconnect.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDisconnect.Image = global::Sample_2.Properties.Resources.icons8_disconnected_32;
             this.btnDisconnect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDisconnect.Location = new System.Drawing.Point(280, 360);
+            this.btnDisconnect.Location = new System.Drawing.Point(268, 0);
+            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.btnDisconnect.Size = new System.Drawing.Size(262, 70);
+            this.btnDisconnect.Size = new System.Drawing.Size(262, 80);
             this.btnDisconnect.TabIndex = 5;
             this.btnDisconnect.Text = "Disconnect";
             this.btnDisconnect.UseVisualStyleBackColor = true;
@@ -98,7 +104,7 @@
             this.cboxCOMPorts.FormattingEnabled = true;
             this.cboxCOMPorts.Location = new System.Drawing.Point(6, 19);
             this.cboxCOMPorts.Name = "cboxCOMPorts";
-            this.cboxCOMPorts.Size = new System.Drawing.Size(512, 24);
+            this.cboxCOMPorts.Size = new System.Drawing.Size(518, 24);
             this.cboxCOMPorts.TabIndex = 0;
             // 
             // gboxOBDProtocol
@@ -118,6 +124,7 @@
             // 
             this.cboxOBDProtocol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cboxOBDProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxOBDProtocol.Enabled = false;
             this.cboxOBDProtocol.FormattingEnabled = true;
             this.cboxOBDProtocol.Items.AddRange(new object[] {
             "ISO 15765 (CAN bus)",
@@ -127,23 +134,14 @@
             "SAE J1850 (PWM)"});
             this.cboxOBDProtocol.Location = new System.Drawing.Point(6, 19);
             this.cboxOBDProtocol.Name = "cboxOBDProtocol";
-            this.cboxOBDProtocol.Size = new System.Drawing.Size(512, 24);
+            this.cboxOBDProtocol.Size = new System.Drawing.Size(518, 24);
             this.cboxOBDProtocol.TabIndex = 0;
-            // 
-            // splitter1
-            // 
-            this.splitter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.splitter1.Location = new System.Drawing.Point(0, 450);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(554, 1);
-            this.splitter1.TabIndex = 9;
-            this.splitter1.TabStop = false;
             // 
             // gboxBaudRate
             // 
             this.gboxBaudRate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gboxBaudRate.Controls.Add(this.button1);
             this.gboxBaudRate.Controls.Add(this.checkboxBaudRate);
             this.gboxBaudRate.Controls.Add(this.labelBaudRate);
             this.gboxBaudRate.Controls.Add(this.tboxBaudRate);
@@ -156,15 +154,26 @@
             this.gboxBaudRate.TabStop = false;
             this.gboxBaudRate.Text = "Baud Rate";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(326, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // checkboxBaudRate
             // 
             this.checkboxBaudRate.AutoSize = true;
-            this.checkboxBaudRate.Location = new System.Drawing.Point(6, 72);
+            this.checkboxBaudRate.Location = new System.Drawing.Point(6, 66);
             this.checkboxBaudRate.Name = "checkboxBaudRate";
             this.checkboxBaudRate.Size = new System.Drawing.Size(207, 21);
             this.checkboxBaudRate.TabIndex = 4;
             this.checkboxBaudRate.Text = "Enter a particular Baud Rate";
             this.checkboxBaudRate.UseVisualStyleBackColor = true;
+            this.checkboxBaudRate.CheckedChanged += new System.EventHandler(this.checkboxBaudRate_CheckedChanged);
             // 
             // labelBaudRate
             // 
@@ -174,9 +183,9 @@
             this.labelBaudRate.ForeColor = System.Drawing.Color.Gray;
             this.labelBaudRate.Location = new System.Drawing.Point(6, 125);
             this.labelBaudRate.Name = "labelBaudRate";
-            this.labelBaudRate.Size = new System.Drawing.Size(134, 13);
+            this.labelBaudRate.Size = new System.Drawing.Size(99, 13);
             this.labelBaudRate.TabIndex = 3;
-            this.labelBaudRate.Text = "Only accepts integer value!";
+            this.labelBaudRate.Text = "Integer values only!";
             // 
             // tboxBaudRate
             // 
@@ -184,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tboxBaudRate.Location = new System.Drawing.Point(6, 99);
             this.tboxBaudRate.Name = "tboxBaudRate";
-            this.tboxBaudRate.Size = new System.Drawing.Size(512, 23);
+            this.tboxBaudRate.Size = new System.Drawing.Size(518, 23);
             this.tboxBaudRate.TabIndex = 2;
             this.tboxBaudRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tboxBaudRate_KeyPress);
             // 
@@ -209,20 +218,34 @@
             "921600"});
             this.cboxBaudRate.Location = new System.Drawing.Point(6, 22);
             this.cboxBaudRate.Name = "cboxBaudRate";
-            this.cboxBaudRate.Size = new System.Drawing.Size(512, 24);
+            this.cboxBaudRate.Size = new System.Drawing.Size(518, 24);
             this.cboxBaudRate.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnConnect, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnDisconnect, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 349);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(530, 80);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
             // Setup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 451);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gboxBaudRate);
-            this.Controls.Add(this.splitter1);
             this.Controls.Add(this.gboxOBDProtocol);
             this.Controls.Add(this.gboxCOMPorts);
-            this.Controls.Add(this.btnDisconnect);
-            this.Controls.Add(this.btnConnect);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Setup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -233,6 +256,7 @@
             this.gboxOBDProtocol.ResumeLayout(false);
             this.gboxBaudRate.ResumeLayout(false);
             this.gboxBaudRate.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -245,11 +269,12 @@
         private System.Windows.Forms.ComboBox cboxCOMPorts;
         private System.Windows.Forms.GroupBox gboxOBDProtocol;
         private System.Windows.Forms.ComboBox cboxOBDProtocol;
-        private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.GroupBox gboxBaudRate;
         private System.Windows.Forms.Label labelBaudRate;
         private System.Windows.Forms.TextBox tboxBaudRate;
         private System.Windows.Forms.ComboBox cboxBaudRate;
         private System.Windows.Forms.CheckBox checkboxBaudRate;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

@@ -108,7 +108,7 @@
             this.btn5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn5.Size = new System.Drawing.Size(230, 60);
             this.btn5.TabIndex = 5;
-            this.btn5.Tag = "FileManager";
+            this.btn5.Tag = "File Manager";
             this.btn5.Text = "File Manager";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
@@ -332,6 +332,7 @@
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelStatus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Program Title | HEMA Industy Inc.";

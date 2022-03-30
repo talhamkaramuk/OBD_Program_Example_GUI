@@ -36,9 +36,9 @@
             this.lblOpen = new System.Windows.Forms.Label();
             this.lblSave = new System.Windows.Forms.Label();
             this.lblSend = new System.Windows.Forms.Label();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,8 @@
             // lblNew
             // 
             this.lblNew.AutoSize = true;
-            this.lblNew.Location = new System.Drawing.Point(18, 47);
+            this.lblNew.BackColor = System.Drawing.Color.Transparent;
+            this.lblNew.Location = new System.Drawing.Point(21, 50);
             this.lblNew.Name = "lblNew";
             this.lblNew.Size = new System.Drawing.Size(29, 13);
             this.lblNew.TabIndex = 2;
@@ -86,7 +87,8 @@
             // lblOpen
             // 
             this.lblOpen.AutoSize = true;
-            this.lblOpen.Location = new System.Drawing.Point(70, 47);
+            this.lblOpen.BackColor = System.Drawing.Color.Transparent;
+            this.lblOpen.Location = new System.Drawing.Point(70, 50);
             this.lblOpen.Name = "lblOpen";
             this.lblOpen.Size = new System.Drawing.Size(33, 13);
             this.lblOpen.TabIndex = 5;
@@ -95,7 +97,8 @@
             // lblSave
             // 
             this.lblSave.AutoSize = true;
-            this.lblSave.Location = new System.Drawing.Point(122, 47);
+            this.lblSave.BackColor = System.Drawing.Color.Transparent;
+            this.lblSave.Location = new System.Drawing.Point(122, 50);
             this.lblSave.Name = "lblSave";
             this.lblSave.Size = new System.Drawing.Size(32, 13);
             this.lblSave.TabIndex = 6;
@@ -104,31 +107,19 @@
             // lblSend
             // 
             this.lblSend.AutoSize = true;
-            this.lblSend.Location = new System.Drawing.Point(174, 47);
+            this.lblSend.BackColor = System.Drawing.Color.Transparent;
+            this.lblSend.Location = new System.Drawing.Point(174, 50);
             this.lblSend.Name = "lblSend";
             this.lblSend.Size = new System.Drawing.Size(32, 13);
             this.lblSend.TabIndex = 7;
             this.lblSend.Text = "Send";
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.FlatAppearance.BorderSize = 0;
-            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOpen.Image = global::Sample_2.Properties.Resources.icons8_file_with_arrow_32;
-            this.btnOpen.Location = new System.Drawing.Point(66, 5);
-            this.btnOpen.Margin = new System.Windows.Forms.Padding(5);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(42, 45);
-            this.btnOpen.TabIndex = 1;
-            this.btnOpen.UseVisualStyleBackColor = false;
-            this.btnOpen.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNew
             // 
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNew.Image = global::Sample_2.Properties.Resources.icons8_new_file_32;
-            this.btnNew.Location = new System.Drawing.Point(14, 5);
+            this.btnNew.Location = new System.Drawing.Point(14, 0);
             this.btnNew.Margin = new System.Windows.Forms.Padding(5);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(42, 45);
@@ -140,12 +131,25 @@
             this.btnSend.FlatAppearance.BorderSize = 0;
             this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSend.Image = global::Sample_2.Properties.Resources.icons8_send_file_32;
-            this.btnSend.Location = new System.Drawing.Point(170, 5);
+            this.btnSend.Location = new System.Drawing.Point(170, 0);
             this.btnSend.Margin = new System.Windows.Forms.Padding(5);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(42, 45);
             this.btnSend.TabIndex = 3;
             this.btnSend.UseVisualStyleBackColor = false;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.FlatAppearance.BorderSize = 0;
+            this.btnOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpen.Image = global::Sample_2.Properties.Resources.icons8_file_with_arrow_32;
+            this.btnOpen.Location = new System.Drawing.Point(66, 0);
+            this.btnOpen.Margin = new System.Windows.Forms.Padding(5);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(42, 45);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnSave
             // 
@@ -153,7 +157,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = global::Sample_2.Properties.Resources.icons8_save_32;
-            this.btnSave.Location = new System.Drawing.Point(118, 5);
+            this.btnSave.Location = new System.Drawing.Point(118, 0);
             this.btnSave.Margin = new System.Windows.Forms.Padding(5);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(42, 45);
