@@ -40,14 +40,18 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pboxLogo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelHeader = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnTitle = new FontAwesome.Sharp.IconButton();
             this.panelMainPage = new System.Windows.Forms.Panel();
+            this.panelStatus = new System.Windows.Forms.Panel();
+            this.pbarStatus = new System.Windows.Forms.ProgressBar();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelHeader.SuspendLayout();
+            this.panelStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -64,7 +68,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 561);
+            this.panelMenu.Size = new System.Drawing.Size(230, 531);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSettings
@@ -94,9 +98,9 @@
             this.btn5.FlatAppearance.BorderSize = 0;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn5.IconChar = FontAwesome.Sharp.IconChar.Box;
+            this.btn5.IconChar = FontAwesome.Sharp.IconChar.Folder;
             this.btn5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.btn5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn5.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btn5.IconSize = 38;
             this.btn5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn5.Location = new System.Drawing.Point(0, 340);
@@ -104,8 +108,8 @@
             this.btn5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn5.Size = new System.Drawing.Size(230, 60);
             this.btn5.TabIndex = 5;
-            this.btn5.Tag = "Button5";
-            this.btn5.Text = "Button5";
+            this.btn5.Tag = "FileManager";
+            this.btn5.Text = "File Manager";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
@@ -115,7 +119,7 @@
             this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn4.IconChar = FontAwesome.Sharp.IconChar.Box;
+            this.btn4.IconChar = FontAwesome.Sharp.IconChar.ChartArea;
             this.btn4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btn4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn4.IconSize = 38;
@@ -125,8 +129,8 @@
             this.btn4.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.btn4.Size = new System.Drawing.Size(230, 60);
             this.btn4.TabIndex = 4;
-            this.btn4.Tag = "Button4";
-            this.btn4.Text = "Button4";
+            this.btn4.Tag = "Graphics";
+            this.btn4.Text = "Graphics";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btn4_Click);
             // 
@@ -238,15 +242,15 @@
             this.pboxLogo.TabIndex = 0;
             this.pboxLogo.TabStop = false;
             // 
-            // panel1
+            // panelHeader
             // 
-            this.panel1.Controls.Add(this.labelTitle);
-            this.panel1.Controls.Add(this.btnTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(230, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(554, 80);
-            this.panel1.TabIndex = 1;
+            this.panelHeader.Controls.Add(this.labelTitle);
+            this.panelHeader.Controls.Add(this.btnTitle);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(230, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Size = new System.Drawing.Size(554, 80);
+            this.panelHeader.TabIndex = 1;
             // 
             // labelTitle
             // 
@@ -282,8 +286,40 @@
             this.panelMainPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainPage.Location = new System.Drawing.Point(230, 80);
             this.panelMainPage.Name = "panelMainPage";
-            this.panelMainPage.Size = new System.Drawing.Size(554, 481);
+            this.panelMainPage.Size = new System.Drawing.Size(554, 451);
             this.panelMainPage.TabIndex = 2;
+            // 
+            // panelStatus
+            // 
+            this.panelStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelStatus.Controls.Add(this.pbarStatus);
+            this.panelStatus.Controls.Add(this.lblStatus);
+            this.panelStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelStatus.Location = new System.Drawing.Point(0, 531);
+            this.panelStatus.Name = "panelStatus";
+            this.panelStatus.Size = new System.Drawing.Size(784, 30);
+            this.panelStatus.TabIndex = 0;
+            // 
+            // pbarStatus
+            // 
+            this.pbarStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbarStatus.ForeColor = System.Drawing.Color.Lime;
+            this.pbarStatus.Location = new System.Drawing.Point(115, 8);
+            this.pbarStatus.Maximum = 1;
+            this.pbarStatus.Name = "pbarStatus";
+            this.pbarStatus.Size = new System.Drawing.Size(30, 13);
+            this.pbarStatus.TabIndex = 3;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Location = new System.Drawing.Point(12, 8);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(97, 13);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Connection Status:";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Main
             // 
@@ -292,18 +328,20 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.panelMainPage);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelStatus);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OBD Program | HEMA Industy Inc.";
+            this.Text = "Program Title | HEMA Industy Inc.";
             this.Load += new System.EventHandler(this.Main_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pboxLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
+            this.panelStatus.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,10 +359,13 @@
         private FontAwesome.Sharp.IconButton btnHome;
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.Panel panelSpace;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Label labelTitle;
         private FontAwesome.Sharp.IconButton btnTitle;
         private System.Windows.Forms.Panel panelMainPage;
+        private System.Windows.Forms.Panel panelStatus;
+        private System.Windows.Forms.ProgressBar pbarStatus;
+        private System.Windows.Forms.Label lblStatus;
     }
 }
 

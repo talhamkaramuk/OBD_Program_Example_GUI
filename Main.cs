@@ -14,6 +14,9 @@ namespace Sample_2
         private IconButton currentButton;
         private Form currentChildForm;
 
+        public string isim { get; set; }
+
+
         // Constructor
         public Main()
         {
@@ -175,13 +178,13 @@ namespace Sample_2
         private void btn4_Click(object sender, System.EventArgs e)
         {
             ActiveButton(sender, RGBColors.color4);
-            OpenChildForm(new Form4());
+            OpenChildForm(new Graph());
         }
 
         private void btn5_Click(object sender, System.EventArgs e)
         {
             ActiveButton(sender, RGBColors.color5);
-            OpenChildForm(new Form5());
+            OpenChildForm(new FileMng());
         }
 
         private void btnSettings_Click(object sender, System.EventArgs e)
