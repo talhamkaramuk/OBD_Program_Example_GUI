@@ -1,62 +1,118 @@
-﻿using System;
-using System.IO.Ports;
+﻿using FontAwesome.Sharp;
+using Sample_2.Forms.DashboardForms;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Sample_2.Forms
 {
     public partial class Dashboard : Form
     {
-
-        private string _data;
+        private IconButton currentButton;
+        private Form currentChildForm;
 
         public Dashboard()
         {
             InitializeComponent();
-            VerticalProgressBarColor.SetState(vpbarFuel, 1);
-            VerticalProgressBarColor.SetState(vpbarTemp, 2);
         }
 
         private void Dashboard_Load(object sender, System.EventArgs e)
         {
-            //serialPort1.Open();
-            serialPort1.DataReceived += new SerialDataReceivedEventHandler(serialPort1_DataReceived);
+            ActiveButton(btnTacho, RGBColors.color1);
+            OpenChildForm(new Tachometers());
         }
 
-        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        // Button Colors
+        #region
+        private struct RGBColors
         {
-            try
-            {
-                _data = serialPort1.ReadLine();
-                this.Invoke(new EventHandler(displayData_event));
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("{0} " + ex.GetType().Name);
-            }
+            public static Color color1 = Color.FromArgb(229, 27, 36);
+            public static Color color2 = Color.FromArgb(229, 27, 36);
+            public static Color color3 = Color.FromArgb(229, 27, 36);
+            public static Color color4 = Color.FromArgb(229, 27, 36);
+            public static Color color5 = Color.FromArgb(229, 27, 36);
+            public static Color color6 = Color.FromArgb(229, 27, 36);
+            public static Color color7 = Color.FromArgb(68, 101, 155);
+            public static Color color8 = Color.FromArgb(61, 61, 61);
         }
+        #endregion
 
-        private void displayData_event(object sender, EventArgs e)
+        // Active Button Handling
+        #region
+        private void ActiveButton(object senderButton, Color color)
         {
-            string[] value = _data.Split('/');
-            if (Convert.ToInt32(value[0]) > 1000)
+            if (senderButton != null)
             {
-                Convert.ToInt32(value[0]).Equals(1000);
+                DeactiveButton();
+
+                currentButton = (IconButton)senderButton;
+                currentButton.BackColor = Color.FromArgb(199, 200, 201);
+                currentButton.ForeColor = Color.FromArgb(0, 0, 0);
+                currentButton.IconColor = color;
             }
-            else
+        }
+        #endregion
+
+        // Deactive Top Menu Button Handling
+        #region
+        private void DeactiveButton()
+        {
+            if (currentButton != null)
             {
-                vpbarFuel.Value = Convert.ToInt32(value[0]);
+                currentButton.BackColor = Color.FromArgb(240, 240, 240);
+                currentButton.ForeColor = Color.FromArgb(61, 61, 61);
+                currentButton.IconColor = Color.FromArgb(61, 61, 61);
+            }
+        }
+        #endregion
+
+        // Open Selected Section Frame
+        #region
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
             }
 
-            if (Convert.ToInt32(value[1]) > 1000)
-            {
-                Convert.ToInt32(value[1]).Equals(1000);
-            }
-            else
-            {
-                vpbarTemp.Value = Convert.ToInt32(value[1]);
-            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelDashMain.Controls.Add(childForm);
+            panelDashMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
 
         }
+        #endregion
+
+        // Top Menu Button Processes
+        #region
+        private void btnTacho_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new Tachometers());
+        }
+
+        private void btnFuel_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new Fuel());
+        }
+
+        private void btnGraph_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new Graphs());
+        }
+
+        private void btnTools_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new Tools());
+        }
+        #endregion
+
     }
 }

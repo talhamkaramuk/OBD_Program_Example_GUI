@@ -14,9 +14,6 @@ namespace Sample_2
         private IconButton currentButton;
         private Form currentChildForm;
 
-        public string isim { get; set; }
-
-
         // Constructor
         public Main()
         {
@@ -27,7 +24,13 @@ namespace Sample_2
             this.DoubleBuffered = true;
         }
 
-        // Side Menu Button Colors
+        private void Main_Load(object sender, System.EventArgs e)
+        {
+            ActiveButton(btnHome, RGBColors.color1);
+            OpenChildForm(new Home());
+        }
+
+        // Button Colors
         #region
         private struct RGBColors
         {
@@ -129,7 +132,6 @@ namespace Sample_2
 
         // Open Selected Section Frame
         #region
-
         private void OpenChildForm(Form childForm)
         {
             if (currentChildForm != null)
@@ -147,14 +149,19 @@ namespace Sample_2
             childForm.Show();
 
         }
-
         #endregion
 
-        // Side Menu Button Click Processes //
+        // Side Menu Button Click Processes
         #region
         private void btnMenu_Click(object sender, System.EventArgs e)
         {
             CollapseMenu();
+        }
+
+        private void btnLogin_Click(object sender, System.EventArgs e)
+        {
+            Login flogin = new Login();
+            flogin.Show();
         }
 
         private void btnHome_Click(object sender, System.EventArgs e)
@@ -175,16 +182,35 @@ namespace Sample_2
             OpenChildForm(new Dashboard());
         }
 
-        private void btn4_Click(object sender, System.EventArgs e)
+        private void btnDiagnostic_Click(object sender, System.EventArgs e)
         {
-            ActiveButton(sender, RGBColors.color4);
-            OpenChildForm(new Graph());
+            if (Login.login == true && (Login.type == "sup" || Login.type == "sub"))
+            {
+                System.Console.WriteLine(Login.username + " " + Login.type);
+                ActiveButton(sender, RGBColors.color4);
+                OpenChildForm(new Diagnostic());
+            }
+            else
+            {
+                MessageBox.Show("Only authorized users! Please log in.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void btn5_Click(object sender, System.EventArgs e)
+        private void btnFM_Click(object sender, System.EventArgs e)
         {
-            ActiveButton(sender, RGBColors.color5);
-            OpenChildForm(new FileMng());
+            if (Login.login == true && Login.type == "sup")
+            {
+                ActiveButton(sender, RGBColors.color5);
+                OpenChildForm(new FileMng());
+            }
+            else if (Login.login == true && Login.type == "sub")
+            {
+                MessageBox.Show("Only super users! Please get contact with your manager.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Only authorized users! Please log in.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnSettings_Click(object sender, System.EventArgs e)
@@ -194,10 +220,39 @@ namespace Sample_2
         }
         #endregion
 
-        private void Main_Load(object sender, System.EventArgs e)
+        // Login/Logout Management
+        #region
+        private void btnLogin_Paint(object sender, PaintEventArgs e)
         {
-            ActiveButton(btnHome, RGBColors.color8);
-            OpenChildForm(new Home());
+            if (Login.login)
+            {
+
+                btnExit.Visible = true;
+                btnLogin.Visible = false;
+                panelAccount.Visible = true;
+                lblAccount.Text = $"Username: {Login.username}\nType: {Login.type}";
+            }
+            if (!Login.login)
+            {
+                btnExit.Visible = false;
+                panelAccount.Visible = false;
+            }
         }
+
+        private void btnExit_Click(object sender, System.EventArgs e)
+        {
+            Login.cnn.Close();
+            Login.login = false;
+            if (!Login.login)
+            {
+                btnExit.Visible = false;
+                btnLogin.Visible = true;
+                panelAccount.Visible = false;
+
+            }
+            OpenChildForm(new Home());
+            ActiveButton(btnHome, RGBColors.color1);
+        }
+        #endregion
     }
 }

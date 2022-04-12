@@ -39,17 +39,11 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
       <HintPath>..\..\..\.nuget\packages\bunifu.ui.winforms\5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
     </Reference>
+    <Reference Include="CodeArtEng.Gauge, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CodeArtEng.Gauge.2.0.0\lib\net40\CodeArtEng.Gauge.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp">
       <HintPath>..\..\..\.nuget\packages\fontawesome.sharp\5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -98,6 +92,42 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DashboardForms\Fuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Fuel.Designer.cs">
+      <DependentUpon>Fuel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Graphs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Graphs.Designer.cs">
+      <DependentUpon>Graphs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Tachometers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Tachometers.Designer.cs">
+      <DependentUpon>Tachometers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Tools.Designer.cs">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DiagnosticForms\TroubleCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DiagnosticForms\TroubleCodes.Designer.cs">
+      <DependentUpon>TroubleCodes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,11 +140,11 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Graph.cs">
+    <Compile Include="Forms\Diagnostic.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Graph.Designer.cs">
-      <DependentUpon>Graph.cs</DependentUpon>
+    <Compile Include="Forms\Diagnostic.Designer.cs">
+      <DependentUpon>Diagnostic.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FileMng.cs">
       <SubType>Form</SubType>
@@ -149,14 +179,32 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\Fuel.resx">
+      <DependentUpon>Fuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\Graphs.resx">
+      <DependentUpon>Graphs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\Tachometers.resx">
+      <DependentUpon>Tachometers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\Tools.resx">
+      <DependentUpon>Tools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DiagnosticForms\TroubleCodes.resx">
+      <DependentUpon>TroubleCodes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FileMng.resx">
       <DependentUpon>FileMng.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Graph.resx">
-      <DependentUpon>Graph.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Diagnostic.resx">
+      <DependentUpon>Diagnostic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
@@ -210,22 +258,37 @@
     <None Include="Resources\icons8-send-file-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-save-as-32.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-save-as-30.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-save-as-28.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-new-file-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-file-32.png" />
+    <None Include="Resources\icons8-file-with-arrow-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-file-with-arrow-32.png" />
+    <None Include="Resources\icons8-engine-oil-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engine-oil-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-temperature-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-temperature-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pressure-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-speedometer-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-speedometer-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

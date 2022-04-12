@@ -83,6 +83,16 @@ namespace Sample_2.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_engine_oil_28 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_engine_oil_28", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_file_with_arrow_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_file_with_arrow_32", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sample_2.Properties {
         internal static System.Drawing.Bitmap icons8_new_file_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_new_file_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_pressure_22 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_pressure_22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +163,39 @@ namespace Sample_2.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_speedometer_22 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_speedometer_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_temperature_22 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_temperature_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_thermometer_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_thermometer_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

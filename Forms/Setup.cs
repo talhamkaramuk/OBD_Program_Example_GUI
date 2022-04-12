@@ -6,12 +6,13 @@ namespace Sample_2.Forms
 {
     public partial class Setup : Form
     {
-
+        // Constructor
         public Setup()
         {
             InitializeComponent();
         }
 
+        // Get Serial Ports
         private void Setup_Load(object sender, EventArgs e)
         {
             string[] ports = SerialPort.GetPortNames();
@@ -96,26 +97,6 @@ namespace Sample_2.Forms
         private void Setup_FormClosed(object sender, FormClosedEventArgs e)
         {
             serialPort1.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
-                {
-                    serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
-                }
-                else if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
-                {
-                    serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
-                }
-                Console.WriteLine($"Port Name: {serialPort1.PortName}, Baud Rate: {serialPort1.BaudRate}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
         }
     }
 }
