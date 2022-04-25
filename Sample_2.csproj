@@ -104,11 +104,17 @@
     <Compile Include="Forms\DashboardForms\Graphs.Designer.cs">
       <DependentUpon>Graphs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DashboardForms\Tachometers.cs">
+    <Compile Include="Forms\DashboardForms\Gauges.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DashboardForms\Tachometers.Designer.cs">
-      <DependentUpon>Tachometers.cs</DependentUpon>
+    <Compile Include="Forms\DashboardForms\Gauges.Designer.cs">
+      <DependentUpon>Gauges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Lights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForms\Lights.Designer.cs">
+      <DependentUpon>Lights.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DashboardForms\Tools.cs">
       <SubType>Form</SubType>
@@ -127,6 +133,15 @@
     </Compile>
     <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LED.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -185,8 +200,11 @@
     <EmbeddedResource Include="Forms\DashboardForms\Graphs.resx">
       <DependentUpon>Graphs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DashboardForms\Tachometers.resx">
-      <DependentUpon>Tachometers.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DashboardForms\Gauges.resx">
+      <DependentUpon>Gauges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForms\Lights.resx">
+      <DependentUpon>Lights.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DashboardForms\Tools.resx">
       <DependentUpon>Tools.cs</DependentUpon>
@@ -211,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Setup.resx">
       <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -289,6 +310,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-user-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-24 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

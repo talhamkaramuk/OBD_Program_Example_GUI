@@ -113,6 +113,16 @@ namespace Sample_2.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_lock_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_new_file_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_new_file_32", resourceCulture);
@@ -186,6 +196,16 @@ namespace Sample_2.Properties {
         internal static System.Drawing.Bitmap icons8_thermometer_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_thermometer_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_user_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

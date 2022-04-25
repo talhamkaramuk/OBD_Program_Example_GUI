@@ -27,44 +27,42 @@ namespace Sample_2.Forms
         #region
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if (!serialPort1.IsOpen)
+            try
             {
-                try
+                serialPort1.PortName = cboxCOMPorts.Text;
+                if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
                 {
-                    serialPort1.PortName = cboxCOMPorts.Text;
-                    if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
-                    {
-                        serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
-                    }
-                    else if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
-                    {
-                        serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
-                    }
-                    serialPort1.Open();
+                    serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
+                }
+                if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
+                {
+                    serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
+                }
+                serialPort1.Open();
+                if (serialPort1.IsOpen)
+                {
                     btnConnect.Enabled = false;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Port is already open", "Warning");
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-            if (serialPort1.IsOpen)
+            try
             {
                 serialPort1.Close();
-                btnConnect.Enabled = true;
-                btnDisconnect.Enabled = false;
+                if (!serialPort1.IsOpen)
+                {
+                    btnConnect.Enabled = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Port is already close", "Warning");
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -96,7 +94,10 @@ namespace Sample_2.Forms
 
         private void Setup_FormClosed(object sender, FormClosedEventArgs e)
         {
-            serialPort1.Close();
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Close();
+            }
         }
     }
 }

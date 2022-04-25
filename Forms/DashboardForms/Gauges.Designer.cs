@@ -1,6 +1,6 @@
 ﻿namespace Sample_2.Forms.DashboardForms
 {
-    partial class Tachometers
+    partial class Gauges
     {
         /// <summary>
         /// Required designer variable.

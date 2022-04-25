@@ -218,6 +218,15 @@ namespace Sample_2
             ActiveButton(sender, RGBColors.color6);
             OpenChildForm(new Settings());
         }
+
+        private void btnUser_Click(object sender, System.EventArgs e)
+        {
+            if (Login.login == true && Login.type == "sup")
+            {
+                ActiveButton(sender, RGBColors.color1);
+                OpenChildForm(new User());
+            }
+        }
         #endregion
 
         // Login/Logout Management
@@ -226,32 +235,51 @@ namespace Sample_2
         {
             if (Login.login)
             {
-
-                btnExit.Visible = true;
+                btnLogout.Visible = true;
                 btnLogin.Visible = false;
                 panelAccount.Visible = true;
                 lblAccount.Text = $"Username: {Login.username}\nType: {Login.type}";
+
+                if (Login.type == "sup")
+                {
+                    btnUser.Visible = true;
+                }
+                else
+                {
+                    btnUser.Visible = false;
+                }
             }
             if (!Login.login)
             {
-                btnExit.Visible = false;
+                btnLogout.Visible = false;
                 panelAccount.Visible = false;
             }
         }
 
-        private void btnExit_Click(object sender, System.EventArgs e)
+        private void btnLogout_Click(object sender, System.EventArgs e)
         {
-            Login.cnn.Close();
-            Login.login = false;
-            if (!Login.login)
-            {
-                btnExit.Visible = false;
-                btnLogin.Visible = true;
-                panelAccount.Visible = false;
+            DialogResult result = MessageBox.Show("Do you want to log out?", "Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (result == DialogResult.Yes)
+            {
+                Login.cnn.Close();
+                Login.cmd.Dispose();
+                Login.rdr.Close();
+                Login.login = false;
+                if (!Login.login)
+                {
+                    btnLogout.Visible = false;
+                    btnLogin.Visible = true;
+                    panelAccount.Visible = false;
+                    btnUser.Visible = false;
+                }
+                OpenChildForm(new Home());
+                ActiveButton(btnHome, RGBColors.color1);
             }
-            OpenChildForm(new Home());
-            ActiveButton(btnHome, RGBColors.color1);
+            else
+            {
+                // Do something
+            }
         }
         #endregion
     }

@@ -19,7 +19,7 @@ namespace Sample_2.Forms
         private void Dashboard_Load(object sender, System.EventArgs e)
         {
             ActiveButton(btnTacho, RGBColors.color1);
-            OpenChildForm(new Tachometers());
+            OpenChildForm(new Gauges());
         }
 
         // Button Colors
@@ -27,13 +27,7 @@ namespace Sample_2.Forms
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(229, 27, 36);
-            public static Color color2 = Color.FromArgb(229, 27, 36);
-            public static Color color3 = Color.FromArgb(229, 27, 36);
-            public static Color color4 = Color.FromArgb(229, 27, 36);
-            public static Color color5 = Color.FromArgb(229, 27, 36);
-            public static Color color6 = Color.FromArgb(229, 27, 36);
-            public static Color color7 = Color.FromArgb(68, 101, 155);
-            public static Color color8 = Color.FromArgb(61, 61, 61);
+            public static Color color2 = Color.FromArgb(61, 61, 61);
         }
         #endregion
 
@@ -60,8 +54,8 @@ namespace Sample_2.Forms
             if (currentButton != null)
             {
                 currentButton.BackColor = Color.FromArgb(240, 240, 240);
-                currentButton.ForeColor = Color.FromArgb(61, 61, 61);
-                currentButton.IconColor = Color.FromArgb(61, 61, 61);
+                currentButton.ForeColor = RGBColors.color2;
+                currentButton.IconColor = RGBColors.color2;
             }
         }
         #endregion
@@ -92,7 +86,7 @@ namespace Sample_2.Forms
         private void btnTacho_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color1);
-            OpenChildForm(new Tachometers());
+            OpenChildForm(new Gauges());
         }
 
         private void btnFuel_Click(object sender, EventArgs e)
@@ -107,12 +101,17 @@ namespace Sample_2.Forms
             OpenChildForm(new Graphs());
         }
 
+        private void btnLights_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new Lights());
+        }
+
         private void btnTools_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color1);
             OpenChildForm(new Tools());
         }
         #endregion
-
     }
 }

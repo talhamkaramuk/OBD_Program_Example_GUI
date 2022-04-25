@@ -30,7 +30,7 @@ C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.SuggestedB
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.Dashboard.resources
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Fuel.resources
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Graphs.resources
-C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Tachometers.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Gauges.resources
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Tools.resources
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DiagnosticForms.TroubleCodes.resources
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.FileMng.resources
@@ -46,3 +46,5 @@ C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.CoreCompil
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.csproj.CopyComplete
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.exe
 C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.pdb
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.DashboardForms.Lights.resources
+C:\Users\Talha\Desktop\C#_Flat_UIs\Sample_2\obj\Debug\Sample_2.Forms.User.resources

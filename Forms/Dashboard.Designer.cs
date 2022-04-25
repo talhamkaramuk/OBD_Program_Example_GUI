@@ -34,6 +34,7 @@
             this.btnFuel = new FontAwesome.Sharp.IconButton();
             this.btnTacho = new FontAwesome.Sharp.IconButton();
             this.btnTools = new FontAwesome.Sharp.IconButton();
+            this.btnLights = new FontAwesome.Sharp.IconButton();
             this.tabpanelTopButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,16 +49,18 @@
             // 
             // tabpanelTopButtons
             // 
-            this.tabpanelTopButtons.ColumnCount = 5;
-            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.98195F));
-            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.41155F));
-            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.06498F));
-            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.3574F));
-            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.18412F));
+            this.tabpanelTopButtons.ColumnCount = 6;
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.98257F));
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.41231F));
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.06564F));
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.89892F));
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.27437F));
+            this.tabpanelTopButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.00722F));
             this.tabpanelTopButtons.Controls.Add(this.btnGraph, 2, 0);
             this.tabpanelTopButtons.Controls.Add(this.btnFuel, 1, 0);
             this.tabpanelTopButtons.Controls.Add(this.btnTacho, 0, 0);
-            this.tabpanelTopButtons.Controls.Add(this.btnTools, 3, 0);
+            this.tabpanelTopButtons.Controls.Add(this.btnTools, 4, 0);
+            this.tabpanelTopButtons.Controls.Add(this.btnLights, 3, 0);
             this.tabpanelTopButtons.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabpanelTopButtons.Location = new System.Drawing.Point(0, 0);
             this.tabpanelTopButtons.Margin = new System.Windows.Forms.Padding(0);
@@ -137,15 +140,35 @@
             this.btnTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTools.IconSize = 32;
             this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTools.Location = new System.Drawing.Point(274, 0);
+            this.btnTools.Location = new System.Drawing.Point(351, 0);
             this.btnTools.Margin = new System.Windows.Forms.Padding(0);
             this.btnTools.Name = "btnTools";
-            this.btnTools.Size = new System.Drawing.Size(74, 39);
+            this.btnTools.Size = new System.Drawing.Size(68, 39);
             this.btnTools.TabIndex = 2;
             this.btnTools.Text = "Tools";
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTools.UseVisualStyleBackColor = true;
             this.btnTools.Click += new System.EventHandler(this.btnTools_Click);
+            // 
+            // btnLights
+            // 
+            this.btnLights.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLights.FlatAppearance.BorderSize = 0;
+            this.btnLights.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLights.IconChar = FontAwesome.Sharp.IconChar.ExclamationCircle;
+            this.btnLights.IconColor = System.Drawing.Color.Black;
+            this.btnLights.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLights.IconSize = 32;
+            this.btnLights.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLights.Location = new System.Drawing.Point(274, 0);
+            this.btnLights.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLights.Name = "btnLights";
+            this.btnLights.Size = new System.Drawing.Size(77, 39);
+            this.btnLights.TabIndex = 4;
+            this.btnLights.Text = "Lights";
+            this.btnLights.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLights.UseVisualStyleBackColor = true;
+            this.btnLights.Click += new System.EventHandler(this.btnLights_Click);
             // 
             // Dashboard
             // 
@@ -171,5 +194,6 @@
         private FontAwesome.Sharp.IconButton btnFuel;
         private FontAwesome.Sharp.IconButton btnTacho;
         private FontAwesome.Sharp.IconButton btnGraph;
+        private FontAwesome.Sharp.IconButton btnLights;
     }
 }

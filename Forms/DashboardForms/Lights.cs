@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Sample_2.Forms.DashboardForms
 {
-    public partial class Tachometers : Form
+    public partial class Lights : Form
     {
-        public Tachometers()
+        public Lights()
         {
             InitializeComponent();
         }
