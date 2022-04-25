@@ -181,6 +181,7 @@
             this.tboxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tboxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tboxPassword.Location = new System.Drawing.Point(76, 78);
+            this.tboxPassword.MaxLength = 8;
             this.tboxPassword.Name = "tboxPassword";
             this.tboxPassword.PasswordChar = '•';
             this.tboxPassword.Size = new System.Drawing.Size(223, 24);

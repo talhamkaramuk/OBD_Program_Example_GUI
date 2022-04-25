@@ -46,6 +46,7 @@ namespace Sample_2.Forms
                     type = reader.GetString(3);
                     MessageBox.Show("Logged in successfully", "", MessageBoxButtons.OK);
                 }
+                reader.Close();
                 Hide();
             }
         }
