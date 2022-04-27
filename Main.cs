@@ -136,7 +136,7 @@ namespace Sample_2
         {
             if (currentChildForm != null)
             {
-                currentChildForm.Close();
+                currentChildForm.Hide();
             }
 
             currentChildForm = childForm;

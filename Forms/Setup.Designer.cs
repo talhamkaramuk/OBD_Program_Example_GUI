@@ -48,9 +48,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // serialPort1
-            // 
-            // 
             // btnConnect
             // 
             this.btnConnect.BackColor = System.Drawing.SystemColors.Control;
@@ -121,6 +118,7 @@
             this.gboxOBDProtocol.TabIndex = 8;
             this.gboxOBDProtocol.TabStop = false;
             this.gboxOBDProtocol.Text = "OBD-2 Protocol";
+            this.gboxOBDProtocol.Visible = false;
             // 
             // cboxOBDProtocol
             // 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO.Ports;
 using System.Windows.Forms;
 
@@ -21,6 +22,11 @@ namespace Sample_2.Forms
                 cboxCOMPorts.Items.Add(port);
             }
             tboxBaudRate.Enabled = false;
+
+            cboxCOMPorts.Text = Properties.Settings.Default.comPort;
+            cboxBaudRate.Text = Properties.Settings.Default.baudRate;
+            tboxBaudRate.Text = Properties.Settings.Default.baudRate;
+            cboxOBDProtocol.Text = Properties.Settings.Default.obdProtocol;
         }
 
         // Connect & Disconnect
@@ -33,14 +39,18 @@ namespace Sample_2.Forms
                 if (cboxBaudRate.Enabled && !tboxBaudRate.Enabled)
                 {
                     serialPort1.BaudRate = Convert.ToInt32(cboxBaudRate.Text);
+                    Properties.Settings.Default.baudRate = cboxBaudRate.Text;
                 }
                 if (!cboxBaudRate.Enabled && tboxBaudRate.Enabled)
                 {
                     serialPort1.BaudRate = Convert.ToInt32(tboxBaudRate.Text);
+                    Properties.Settings.Default.baudRate = tboxBaudRate.Text;
                 }
                 serialPort1.Open();
                 if (serialPort1.IsOpen)
                 {
+                    Properties.Settings.Default.comPort = cboxCOMPorts.Text;
+                    Properties.Settings.Default.obdProtocol = cboxOBDProtocol.Text;
                     btnConnect.Enabled = false;
                 }
             }
@@ -98,6 +108,7 @@ namespace Sample_2.Forms
             {
                 serialPort1.Close();
             }
+            Properties.Settings.Default.Save();
         }
     }
 }

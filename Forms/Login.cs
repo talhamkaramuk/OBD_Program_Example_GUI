@@ -1,6 +1,5 @@
 ﻿using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Drawing;
 
 namespace Sample_2.Forms
 {
